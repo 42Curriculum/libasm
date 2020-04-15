@@ -21,8 +21,8 @@ int main()
 	printf("___Regular_str_test : This is a 31 bytes long string\n\n");
 	printf("Strlen output: %ld \n", strlen("This is a 31 bytes long string"));
 	printf("My output: %ld \n", ft_strlen("This is a 31 bytes long string"));
-//NULL string
-	printf("\n___NULL_str_test : NULL");
+//NULL string yeah can't do that cause strlen not supposed to hand that
+//	printf("\n___NULL_str_test : NULL");
 //	printf("Strlen output: %d \n", strlen(NULL));
 //	printf("My output: %ld \n", ft_strlen(NULL));
 //Empty string
@@ -174,7 +174,7 @@ int main()
 	printf("My errno : %d\n",myerr);
 	errno = 0;
 
-//2 fd-----------------------------------------------------------
+//2 fd-------------------------------------------------------------
 	syserr = 0;
 	myerr = 0;
 	printf("\n__Stderr_test : readme\n");	
@@ -188,22 +188,8 @@ int main()
 	myerr = errno;
 	printf("My errno : %d\n",myerr);
 	errno = 0;
-//NULL buffer-------------------------------------------------------
-	syserr = 0;
-	myerr = 0;
-	printf("\n__NULL_Buff_test : readme\n");	
 
-	printf("Read output: Bytes : %ld\t", read(fd, NULL, 6));
-	syserr = errno;
-	printf("Syserrno : %d\n",syserr);
-	errno = 0;
-
-	printf("My output: Bytes : %ld\t", ft_read(fd, NULL, 6));
-	myerr = errno;
-	printf("My errno : %d\n",myerr);
-	errno = 0;
-
-//Empty buffer---------------------------------------------------
+//Empty buffer------------------------------------------------------
 	syserr = 0;
 	myerr = 0;
 	printf("\n__Empty_Buff : readme\n");	
