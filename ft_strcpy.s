@@ -13,8 +13,7 @@ ft_strcpy:
 		cmp rsi, 0 ;if rsi is null, return dst
 		je _ret_null
 
-		push rsi
-		push rdi
+
 		; saves rsi and rdi ? I think?
 _ft_loop:
 		mov r15b, [rsi]
@@ -26,8 +25,6 @@ _ft_loop:
 
 		mov r15b, [rsi]
 		mov [rdi], r15b
-		pop rdi
-		pop rsi
 _ret_null:
 		mov rax, rdi
 		ret 

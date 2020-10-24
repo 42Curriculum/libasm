@@ -3,7 +3,7 @@ section .text
 		
 ft_strlen:
 		cmp rdi, 0
-		je _isnull
+		ej _isnull
 
 		mov r8, rdi
 		mov rbx, 0

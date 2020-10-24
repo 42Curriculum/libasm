@@ -3,7 +3,7 @@ section .text
 		extern __errno_location
 ft_read:
 		mov rax, 0
-		
+
 		cmp sil, 0
 		je _ret_0
 		
